@@ -2,11 +2,10 @@
 
 # Background
 Our Python project aims to make the process of buying and selling houses more efficient and secure by using blockchain technology. We have created a platform that allows users to list their properties for sale and browse available listings.
-
 Once the conditions of the sale have been met, the platform automatically executes the transfer of ownership and funds on the blockchain.
-
 Overall, our Python project utilizing blockchain technology aims to provide a faster and safer way for individuals to buy and sell houses.
 
+##
 Our project aims to allow users to purchase / sell a house using blockchain technoledgey. With our program, people have the option to browse photos of the houses, and other important details like sqft, price, adress, and more. The streamlit userface allows for a simple UI for user to interact with. This program is running on a virutal serivce, allowing anyone to view it by using a web address. 
 
 # Blockchain 
