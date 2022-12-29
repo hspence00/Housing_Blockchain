@@ -99,7 +99,7 @@ house_address = housing_database[houses][1]
 st.sidebar.write(house_address)
 
 # Sidebar Streamlit
-st.sidebar.markdown("## Total Wage in Ether")
+st.sidebar.markdown("## Total Amount in Ether")
 
 # Create the transcation hash
 if st.sidebar.button("Send Transaction"):
