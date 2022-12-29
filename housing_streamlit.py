@@ -93,7 +93,7 @@ price = housing_database[houses][3]
 st.sidebar.write(price)
 
 # Identify the houses Ethereum Address
-house_address = housing_database[houses][2]
+house_address = housing_database[houses][1]
 
 # Write the houses Ethereum Address to the sidebar
 st.sidebar.write(house_address)
