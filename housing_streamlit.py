@@ -8,6 +8,51 @@ from crypto_wallet import get_balance
 from crypto_wallet import send_transaction
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 
+# Creating a simple login page.
+import streamlit_authenticator as stauth
+import yaml
+
+hashed_passwords = stauth.Hasher(['123', '456']).generate()
+with open('./config.yaml') as file:
+    config = yaml.load(file, Loader=yaml.SafeLoader)
+
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+
+name, authentication_status, username = authenticator.login('Login', 'main')
+
+if authentication_status:
+    authenticator.logout('Logout', 'main')
+    st.write('Welcome')
+    st.title('Some content')
+elif authentication_status == False:
+    st.error('Username/password is incorrect')
+elif authentication_status == None:
+    st.warning('Please enter username and password')
+
+# Creat background photo
+import base64
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"jpeg"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('background2.jpeg')
+
 # Create a database of the houses
 
 housing_database = {
@@ -38,10 +83,46 @@ housing_database = {
         "10,600 sqft",
         "5 Bed, 6 Bath",
     ],
+    "House 4": [
+        "House 4",
+        "0x1099C08D73BedF05026ea678D4B59087a8143d34",
+        "5637 N 110th Pl, Scottsdale, AZ 85255",
+        250,
+        "Images/house4.jpg",
+        "10,600 sqft",
+        "5 Bed, 6 Bath",
+    ],
+    "House 5": [
+        "House 5",
+        "0x0fF7CECF9C980A26cA8C9269a1158C1E63b785DB",
+        "4227 N Burnham Pl, Scottsdale, AZ 85255",
+        250,
+        "Images/house5.jpg",
+        "8,600 sqft",
+        "5 Bed, 6 Bath",
+    ],
+    "House 6": [
+        "House 6",
+        "0x04E537653B57753CfEbf4f03DC9144D22905259F",
+        "1001 W Country Rd, Scottsdale, AZ 85255",
+        250,
+        "Images/house6.jpg",
+        "9,600 sqft",
+        "5 Bed, 6 Bath",
+    ],
+    "House 7": [
+        "House 7",
+        "0x3CE50A84bA63B1Ca28117E3c1Ff16dbd8E67FB02",
+        "4227 N Burnham Pl, Scottsdale, AZ 85255",
+        250,
+        "Images/house7.jpg",
+        "10,600 sqft",
+        "5 Bed, 6 Bath",
+    ]
 }
 
 # A list of houses
-house = ["House 1", "House 2", "House 3"]
+house = ["House 1", "House 2", "House 3", "House 4", "House 5", "House 6", "House 7"]
 
 # Function to display housing data to streamlit
 def get_house():
