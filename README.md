@@ -21,3 +21,7 @@ crypto_wallet.py
 ![alt=""](./ReadMe%20Images/Screenshot%202023-01-06%20at%205.54.53%20PM.png)
 housing_streamlit.py
 ![alt=""](./ReadMe%20Images/Screenshot%202023-01-06%20at%205.55.18%20PM.png)
+
+# Configuration
+
+The yaml configuration file is used to store username and password data for login credentials. If an incorrect password is entered the user will receive an error message. This function is just a mock-up and only stores a handful of selected usernames for demo purposes. Plans for future advancement include the ability to store crypto wallet ID's along with the usernames.  
