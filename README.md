@@ -16,6 +16,21 @@ In the package, there is a wallet.py that is made up of basic blockcahin functio
 
 Due to restrints of the test eviroments wallet, the prices of the houses are much lower than actual. Due to the limitations, we price the house in ETH and within the values we had in our test wallets. Otherwise, we'd price the houses in USD then convert to ETH value for transaction
 
+# Installation Guide
+1. Clone repository onto local computer
+2. This project requires python and multiple import installs
+3. The import install includes:
+   streamlit
+   web3
+   streamlit_authenticator
+   yaml
+4. Once all ther required libraries are installed, in your terminal, run ;  streamlit run housing_streamlit.py * Skip this step until step 9
+5. A pop up should display prompting a local url and a network url. Copy and paste any of them into your browser to view and interact.
+6. Next, download ganache. This is the blockchain test network app we use. 
+7. After you set up a network, pressing "quick start", copy the mneomic phrase shown towards the top of the screen. 
+8. Then go to the wallet.py, and edit line 13, the mneomic variable. Set it to your mneomic phrase.
+9. After you set up the ganache, wallet, and import the proper libraries, run the application following step 4
+
 # Imports
 wallet.py
 
