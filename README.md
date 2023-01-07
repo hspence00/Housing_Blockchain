@@ -28,10 +28,7 @@ The yaml configuration file is used to store username and password data for logi
 
 # Crypto_Wallet.py
 
-Crypto wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also gives functionality to User Interface:
-  get_balance: Converts user’s balance from wei to ether (eth)
-  send_transaction: 
-It also automatically estimates and sets  gas price strategies for all executed transactions. It converts eth into wei which required for gas fees, and sends a signed transaction for user confirmation.
+Crypto wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also automatically estimates and sets gas price strategies for all executed transactions. It converts eth into wei which is required for gas fees, and sends a signed transaction for user confirmation.
 
 # Streamlit File
 
