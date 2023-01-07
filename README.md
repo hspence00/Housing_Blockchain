@@ -5,9 +5,6 @@ Our Python project aims to make the process of buying and selling houses more ef
 This is a basic demonstration on how blockchain technoledgey can be a payment solution for buying and selling homes. Using blockchain for payment gives the users more security, decentralization, and cost efficency. 
 Once the conditions of the sale have been met, the platform automatically executes the transfer of ownership and funds on the blockchain.
 
-##
-Our project aims to allow users to purchase / sell a house using blockchain technoledgey. With our program, people have the option to browse photos of the houses, and other important details like sqft, price, adress, and more. The streamlit userface allows for a simple UI for user to interact with. This program is running on a virutal serivce, allowing anyone to view it by using a web address. 
-
 # Blockchain 
 
 In the package, there is a wallet.py that is made up of basic blockcahin functions. This file contains all the functions, we inherit, in the main .py file. Using ganache, we are able to test the payment system. Becuase of this, the houses are priced according to how much a Ganache wallet holds.
