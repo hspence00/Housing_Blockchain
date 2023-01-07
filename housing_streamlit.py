@@ -3,9 +3,9 @@ import streamlit as st
 from dataclasses import dataclass
 from typing import Any, List
 from web3 import Web3
-from crypto_wallet import generate_account
-from crypto_wallet import get_balance
-from crypto_wallet import send_transaction
+from wallet import generate_account
+from wallet import get_balance
+from wallet import send_transaction
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 
 # Creating a simple login page.
@@ -147,10 +147,10 @@ st.text(" \n")
 # Create Sidebar
 st.sidebar.markdown("##  House Account Address and Ethernet Balance in Ether")
 
-# Call the generate_account function from cyrpto_wallet.py
+# generate_account function 
 account = generate_account()
 
-# Write the client's Ethereum account address to the sidebar
+# Write Ethereum account address to sidebar
 st.sidebar.write(account.address)
 
 # Display balance of account adress on side bar
@@ -193,7 +193,7 @@ if st.sidebar.button("Send Transaction"):
     # Write the returned transaction hash to the screen
     st.sidebar.write(transaction_hash)
 
-    # Celebrate your successful payment
+    # Celebrate
     st.balloons()
 
 get_house()
