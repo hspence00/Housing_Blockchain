@@ -25,3 +25,28 @@ housing_streamlit.py
 # Configuration
 
 The yaml configuration file is used to store username and password data for login credentials. If an incorrect password is entered the user will receive an error message. This function is just a mock-up and only stores a handful of selected usernames for demo purposes. Plans for future advancement include the ability to store crypto wallet ID's along with the usernames.  
+
+# Crypto_Wallet.py
+
+Crypto wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also gives functionality to User Interface:
+  get_balance: Converts user’s balance from wei to ether (eth)
+  send_transaction: 
+It also automatically estimates and sets  gas price strategies for all executed transactions. It converts eth into wei which required for gas fees, and sends a signed transaction for user confirmation.
+
+# Streamlit File
+
+<img width="1440" alt="Screenshot 2023-01-04 at 6 39 32 PM" src="https://user-images.githubusercontent.com/18622578/211123050-fe90e657-b6a3-4dfe-a2d9-b1d9a4bcd75a.png">
+
+Our housing_streamlit file creates a decentralized application (dApp) using Streamlit, where users can purchase and sell homes by selecting a home from the drop down feature.
+<img width="323" alt="Screenshot 2023-01-04 at 6 40 36 PM" src="https://user-images.githubusercontent.com/18622578/211123348-cf7f2519-c3f7-4368-9ebe-67bbac02c9ae.png">
+
+
+Images of the homes available in the database are listed. The app displays the contract address and amount of home. It also provides an efficient and secure payment method with a validated transaction hash.
+
+<img width="328" alt="Screenshot 2023-01-04 at 7 02 29 PM" src="https://user-images.githubusercontent.com/18622578/211123266-9a062d9d-ea0d-4c23-91e2-067623af548c.png">
+
+
+<img width="1197" alt="Screenshot 2023-01-04 at 7 02 48 PM" src="https://user-images.githubusercontent.com/18622578/211123394-501dcde2-d2ef-4754-b6d5-3a21ffed01ff.png">
+
+
+
