@@ -10,7 +10,7 @@ Our project aims to allow users to purchase / sell a house using blockchain tech
 
 # Blockchain 
 
-In the package, there is a crypto_wallet.py that is made up of basic blockcahin functions. This file contains all the functions, we inherit, in the main .py file. Using ganache, we are able to test the payment system. Becuase of this, the houses are priced according to how much a Ganache wallet holds.
+In the package, there is a wallet.py that is made up of basic blockcahin functions. This file contains all the functions, we inherit, in the main .py file. Using ganache, we are able to test the payment system. Becuase of this, the houses are priced according to how much a Ganache wallet holds.
 
 # Main.py
 
