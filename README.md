@@ -17,7 +17,7 @@ In the package, there is a crypto_wallet.py that is made up of basic blockcahin 
 Due to restrints of the test eviroments wallet, the prices of the houses are much lower than actual. Due to the limitations, we price the house in ETH and within the values we had in our test wallets. Otherwise, we'd price the houses in USD then convert to ETH value for transaction
 
 # Imports
-crypto_wallet.py
+wallet.py
 ![alt=""](./ReadMe%20Images/Screenshot%202023-01-06%20at%205.54.53%20PM.png)
 housing_streamlit.py
 ![alt=""](./ReadMe%20Images/Screenshot%202023-01-06%20at%205.55.18%20PM.png)
@@ -26,9 +26,9 @@ housing_streamlit.py
 
 The yaml configuration file is used to store username and password data for login credentials. If an incorrect password is entered the user will receive an error message. This function is just a mock-up and only stores a handful of selected usernames for demo purposes. Plans for future advancement include the ability to store crypto wallet ID's along with the usernames.  
 
-# Crypto_Wallet.py
+# wallet.py
 
-Crypto wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also automatically estimates and sets gas price strategies for all executed transactions. It converts eth into wei which is required for gas fees, and sends a signed transaction for user confirmation.
+Wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also automatically estimates and sets gas price strategies for all executed transactions. It converts eth into wei which is required for gas fees, and sends a signed transaction for user confirmation.
 
 # Streamlit File
 
