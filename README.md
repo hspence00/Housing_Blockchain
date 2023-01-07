@@ -38,6 +38,8 @@ It also automatically estimates and sets  gas price strategies for all executed 
 <img width="1440" alt="Screenshot 2023-01-04 at 6 39 32 PM" src="https://user-images.githubusercontent.com/18622578/211123050-fe90e657-b6a3-4dfe-a2d9-b1d9a4bcd75a.png">
 
 Our housing_streamlit file creates a decentralized application (dApp) using Streamlit, where users can purchase and sell homes by selecting a home from the drop down feature.
+
+
 <img width="323" alt="Screenshot 2023-01-04 at 6 40 36 PM" src="https://user-images.githubusercontent.com/18622578/211123348-cf7f2519-c3f7-4368-9ebe-67bbac02c9ae.png">
 
 
