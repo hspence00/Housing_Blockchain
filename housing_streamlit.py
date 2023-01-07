@@ -188,13 +188,10 @@ if st.sidebar.button("Send Transaction"):
     transaction_hash = send_transaction(w3, account, house_address, price)
 
     # Markdown for the transaction hash
-    st.sidebar.markdown("#### Validated Transaction Hash")
+    st.sidebar.markdown("## Validated Transaction Hash")
 
     # Write the returned transaction hash to the screen
     st.sidebar.write(transaction_hash)
-
-    # Celebrate
-    st.balloons()
 
 get_house()
 
