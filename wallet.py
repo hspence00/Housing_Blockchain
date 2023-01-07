@@ -6,7 +6,9 @@ from web3 import Account
 from web3 import middleware
 from web3.gas_strategies.time_based import medium_gas_price_strategy
 
-# Create Functions
+## Create Functions
+
+# Generate Account
 def generate_account():
     
     # Fetch mnemonic
@@ -23,7 +25,7 @@ def generate_account():
 
     return account
 
-
+# Get Balance
 def get_balance(w3, address):
     
     # Get balance of address in Wei
@@ -35,7 +37,7 @@ def get_balance(w3, address):
     # Return the value in ether
     return ether
 
-
+# Send Transaction
 def send_transaction(w3, account, to, wage):
     
     # Set gas price strategy
