@@ -2,8 +2,8 @@
 
 # Background
 Our Python project aims to make the process of buying and selling houses more efficient and secure by using blockchain technology. We have created a platform that allows users to list their properties for sale and browse available listings.
+This is a basic demonstration on how blockchain technoledgey can be a payment solution for buying and selling homes. Using blockchain for payment gives the users more security, decentralization, and cost efficency. 
 Once the conditions of the sale have been met, the platform automatically executes the transfer of ownership and funds on the blockchain.
-Overall, our Python project utilizing blockchain technology aims to provide a faster and safer way for individuals to buy and sell houses.
 
 ##
 Our project aims to allow users to purchase / sell a house using blockchain technoledgey. With our program, people have the option to browse photos of the houses, and other important details like sqft, price, adress, and more. The streamlit userface allows for a simple UI for user to interact with. This program is running on a virutal serivce, allowing anyone to view it by using a web address. 
@@ -12,9 +12,9 @@ Our project aims to allow users to purchase / sell a house using blockchain tech
 
 In the package, there is a wallet.py that is made up of basic blockcahin functions. This file contains all the functions, we inherit, in the main .py file. Using ganache, we are able to test the payment system. Becuase of this, the houses are priced according to how much a Ganache wallet holds.
 
-# Main.py
+# housing_streamlit.py
 
-Due to restrints of the test eviroments wallet, the prices of the houses are much lower than actual. Due to the limitations, we price the house in ETH and within the values we had in our test wallets. Otherwise, we'd price the houses in USD then convert to ETH value for transaction
+This file is the main file for our repository. This is the file you will run, in the installation quide bellow. In this file, there are several imports required. Including streamlit and web3, etc. The streamlit website layout is in this file, including the housing database. The Housing database is a self made database using data from zillow. To add a house to the application, one would need to edit lines 58-122, follow the format. This file will also inherent functions from wallet.py, to use blockchain functions in the application. There is also a streamlit_authenticator that is used as a login page. Currently serves no function. Next upgrades will be to add a section page where a person can add their house to the application through the UI.
 
 # Installation Guide
 1. Clone repository onto local computer
@@ -31,6 +31,8 @@ Due to restrints of the test eviroments wallet, the prices of the houses are muc
 8. Then go to the wallet.py, and edit line 13, the mneomic variable. Set it to your mneomic phrase.
 9. After you set up the ganache, wallet, and import the proper libraries, run the application following step 4
 
+This is the download link for ganache
+https://trufflesuite.com/ganache/
 # Imports
 wallet.py
 
@@ -47,7 +49,7 @@ The yaml configuration file is used to store username and password data for logi
 
 # wallet.py
 
-Wallet that loads user’s dotenv() file for mnemonic phrase. The mnemonic phrase is unique to the user’s crypto wallet authentication keys. It also automatically estimates and sets gas price strategies for all executed transactions. It converts eth into wei which is required for gas fees, and sends a signed transaction for user confirmation.
+This file does has 3 primary functions, create wallet, send transaction, and view balance. This is all done using the web3 import. We inherent this file into housing_streamlit.py to import those functions for the application. Currently, the wallet is connected to the Ganache test network. In order to use this project properly, you must download the Ganache application first. To configure your ganache wallet to the file, you must edit line 13 mneomic variable to the wallet you create on ganacge.
 
 # Streamlit File
 
